@@ -26,6 +26,9 @@ class Config:
 
     CACHE_TYPE = 'simple'  # 缓存设置
 
+    CKEDITOR_SERVE_LOCAL = True  # 富文本
+
+
     @staticmethod
     def init_app(app):
         pass

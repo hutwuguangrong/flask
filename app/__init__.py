@@ -9,7 +9,7 @@ from flask_sqlalchemy import get_debug_queries
 from logging.handlers import RotatingFileHandler, SMTPHandler
 
 from config import config, basedir
-from app.extensions import bootstrap, moment, db, login_manager, pagedown, mail, toolbar, cache
+from app.extensions import bootstrap, moment, db, login_manager, mail, toolbar, cache, ckeditor
 from app.faker import fake_users, fake_posts
 from app.models import Role, User, Post
 
@@ -120,9 +120,9 @@ def register_extensions(app):
     db.init_app(app)
     mail.init_app(app)
     login_manager.init_app(app)
-    pagedown.init_app(app)
     toolbar.init_app(app)
     cache.init_app(app)
+    ckeditor.init_app(app)
 
 
 def register_request_handlers(app):
